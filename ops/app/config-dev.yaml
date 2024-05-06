@@ -1,0 +1,16 @@
+name: logzy
+env: dev
+slack-uri: { SLACK_WEBHOOK_URI }
+target-service: account-service-DEV
+log-file-name: account-service-DEV.log
+log-location: /var/log
+logger-file-location: /var/log/logzy
+response-timeout: 30
+
+# regex patterns
+start-error-patterns:
+  [
+    '(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{3}\+\d{4}) \| (ERROR) \| ([A-Z_]+) \| (\w+) \| (\w+) \| (.+)',
+    "(?i)shutting down|shutdown completed|shutdown requested",
+    'OutOfMemoryError|Critical\sError',
+  ]

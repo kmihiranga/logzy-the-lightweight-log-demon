@@ -1,0 +1,1 @@
+2024-04-10 03:48:34.052+0000 | ERROR | ACCOUNT_SERVICE | DEV | HANDLE_EXCEPTION | com.netwizsoft.custom.domain.security.exception.AccessDeniedException: User not found.
