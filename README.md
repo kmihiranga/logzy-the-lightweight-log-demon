@@ -9,8 +9,8 @@ Tailing the log files from your specified log file and send slack notifications 
 ## Things currently developed
 
 - Tailing the log files
-- Maintain a log rotation
-- Indexing the log files
+- Adjust tailing log files according to the log rotation
+- Indexing the log files and identified current state in the log file
 - Filtering the error logs
 - push notifications to the Slack channel
 
