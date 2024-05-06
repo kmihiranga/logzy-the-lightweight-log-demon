@@ -1,4 +1,4 @@
-# LOGZY - The lightweight log notification handler for your service.
+## LOGZY - The lightweight log notification handler for your service.
 
 enable notifications for your specific log message
 
