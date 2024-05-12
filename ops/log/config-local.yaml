@@ -3,7 +3,7 @@ development: false
 disableCaller: false
 disableStacktrace: false
 encoding: console
-outputPaths: ["stdout", "logs/logzy.log"]
+outputPaths: ["stdout"]
 encoderConfig:
   messageKey: "message"
   levelKey: "level"
