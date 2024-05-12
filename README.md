@@ -43,3 +43,15 @@ CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o logzy .
 ```bash
 docker build -t logzy && docker run -d logzy
 ```
+
+## Things need to setup before run the project
+
+- First you need to change the Slack incoming webhook URL property named as `slack-uri` inside `ops/app/config-local.yaml` file.
+
+- Then you need to mention the log file name you need to tail inside the `ops/app/config-local.yaml` file property named as `log-file-name`.
+
+- There is two log locations you need to add the setup file. first one is `log-location` property. This is the log file location you need to tail.
+
+- Second one is `logger-file-location`. This is the log file location related to your application logs. If there is no log file location mentioned in the `outputPaths` property in `ops/log/config-{ENV}.yaml` then you need to add a location with file name like `logs/logzy.log` and check if there is a file in your mentioned place.
+
+- for locally run the project you can run `ENV=local go run main.go` command. Install go setup before run the command.
