@@ -46,9 +46,9 @@ docker build -t logzy && docker run -d logzy
 
 ## Things need to setup before run the project
 
-- First you need to change the Slack incoming webhook URL property named as `slack-uri` inside `ops/app/config-local.yaml` file.
+- First you need to change the Slack incoming webhook URL property named as `slack-uri` inside `ops/app/config-{ENV}.yaml` file.
 
-- Then you need to mention the log file name you need to tail inside the `ops/app/config-local.yaml` file property named as `log-file-name`.
+- Then you need to mention the log file name you need to tail inside the `ops/app/config-{ENV}.yaml` file property named as `log-file-name`.
 
 - There is two log locations you need to add the setup file. first one is `log-location` property. This is the log file location you need to tail.
 
