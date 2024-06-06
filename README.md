@@ -1,12 +1,16 @@
-## LOGZY - The lightweight log notification handler for your service.
+# :whale: **LOGZY**
 
-enable notifications for your specific log message
+<img src="assets/logo.png" width=100% style="float: left display: block; margin: 0 auto;"/>
 
-## How it works
+
+
+#### Enable notifications for your specific log message
+
+## :hammer_and_wrench: How it works
 
 Tailing the log files from your specified log file and send slack notifications using filtered log messages regex.
 
-## Things currently developed
+## :white_check_mark: Things currently developed
 
 - Tailing the log files
 - Adjust tailing log files according to the log rotation
@@ -14,7 +18,7 @@ Tailing the log files from your specified log file and send slack notifications 
 - Filtering the error logs
 - push notifications to the Slack channel
 
-## Plans to release on next versions
+## :rotating_light: Plans to release on next versions
 
 - Make support for other notification platforms like PagerDuty, Discord.
 - improve logs filtering functionality using more custom regex filter functions.
@@ -22,7 +26,7 @@ Tailing the log files from your specified log file and send slack notifications 
 - develop an agent to gather metrics as a background task with low usage.
 - develop dashboard to visualize the metrics and logs issues.
 
-## Option 01: Make a executable file and run as a system demon
+## :one: Option 01: Make a executable file and run as a system demon
 
 - First you need to make a executable file using go build command.
 
@@ -36,7 +40,7 @@ CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o logzy .
 
 - Make sure to create a log file named as `logzy.log` as mentioned log configuration file paths in ops config log file.
 
-## Option 02: Run as a dockerfile
+## :two: Option 02: Run as a dockerfile
 
 - We have provided a Dockerfile and you can customize that as you need
 
@@ -44,7 +48,7 @@ CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o logzy .
 docker build -t logzy && docker run -d logzy
 ```
 
-## Things need to setup before run the project
+## :bangbang: Things need to setup before run the project
 
 - First you need to change the Slack incoming webhook URL property named as `slack-uri` inside `ops/app/config-{ENV}.yaml` file.
 
